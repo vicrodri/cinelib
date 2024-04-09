@@ -14,7 +14,7 @@ export const MovieList: FC<MovieListProps> = (props: MovieListProps) => {
   return (
     <main>
       <section className="max-w-7xl mx-auto py-7">
-        <div className="flex justify-start flex-wrap">
+        <div className="flex justify-evenly flex-wrap sm:justify-start">
           {movieList
             ? movieList.map((item) => <Card key={item.id} movie={item} />)
             : null}

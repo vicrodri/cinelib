@@ -20,12 +20,12 @@ export const Footer: FC = () => {
               </Link>
             </li>
             <li>
-              <Link to="#" target="_blank" className="hover:underline me-4 md:me-6">
+              <Link to="https://github.com/vicrodri/cinelib" target="_blank" className="hover:underline me-4 md:me-6">
                 Github
               </Link>
             </li>
             <li>
-              <Link to="#" target="_blank" className="hover:underline">
+              <Link to="https://github.com/vicrodri" target="_blank" className="hover:underline">
                 Contact
               </Link>
             </li>

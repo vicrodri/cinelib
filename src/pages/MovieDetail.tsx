@@ -15,7 +15,10 @@ export const MovieDetail: FC = () => {
     const fetchMovie = async () => {
       const movie_id = params.id ? params.id : "";
       const response = await fetch(
-        `https://api.themoviedb.org/3/movie/${movie_id}?api_key=e2159e4f550986fdf0c380f5c3af6b15`
+        `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${
+            // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+            import.meta.env.VITE_TMDB_APP_API_KEY
+          }`
       );
       const jsonResult: Movie = (await response.json()) as Movie;
       console.log(jsonResult);

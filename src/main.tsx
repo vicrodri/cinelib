@@ -1,12 +1,20 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router } from "react-router-dom";
 
-const root = document.getElementById('root');
+import App from "./App.tsx";
+import "./index.css";
+import { ScrollToTop } from "./components";
 
-root ? ReactDOM.createRoot(root).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-) : null;
+const root = document.getElementById("root");
+
+root
+  ? ReactDOM.createRoot(root).render(
+      <React.StrictMode>
+        <Router>
+          <ScrollToTop />
+          <App />
+        </Router>
+      </React.StrictMode>
+    )
+  : null;
